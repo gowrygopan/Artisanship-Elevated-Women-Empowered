@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment - SkillBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .payment-box {
+            background: white;
+            padding: 50px;
+            max-width: 500px;
+            margin: 60px auto;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .payment-box input {
+            padding: 14px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .payment-box input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px hsla(var(--primary-hue), 70%, 50%, 0.1);
+        }
+
+        #payment-msg {
+            margin-top: 20px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2 class="page-title">Secure Checkout</h2>
+        <p>Your support directly impacts rural entrepreneurs.</p>
+    </header>
+
+    <main class="products-section">
+        <div class="payment-box">
+            <h3 style="margin-bottom: 20px;">Payment Details</h3>
+
+            <input type="text" placeholder="Card Number">
+            <input type="text" placeholder="Card Holder Name">
+            <div style="display: flex; gap: 20px;">
+                <input type="text" placeholder="MM/YY" style="flex: 1;">
+                <input type="text" placeholder="CVV" style="flex: 1;">
+            </div>
+
+            <button onclick="payNow()">Pay Now</button>
+            <p id="payment-msg"></p>
+        </div>
+
+        <a href="cart.html" class="back">⬅ Back to Cart</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
